@@ -3,101 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معلم سيراميك ورخام بالرياض</title>
+    <title>معلم سيراميك وبورسلان بالرياض | تنفيذ ورخام بأعلى دقة</title>
+    <!-- مكتبة الأيقونات الرسمية FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f8f9fa; color: #333; padding-bottom: 80px; }
-        
-        header { background: #1a252f; color: #fff; text-align: center; padding: 30px 15px; }
-        header h1 { font-size: 24px; margin-bottom: 8px; color: #f39c12; }
-        header p { font-size: 16px; opacity: 0.9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; padding-bottom: 90px; line-height: 1.7; }
 
-        .container { padding: 15px; max-width: 1000px; margin: 0 auto; }
-        
+        /* الهيدر */
+        header { 
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
+            color: #fff; 
+            text-align: center; 
+            padding: 45px 20px 35px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 { font-size: 26px; margin-bottom: 12px; color: #f59e0b; font-weight: 800; }
+        header p { font-size: 16px; color: #cbd5e1; max-width: 600px; margin: 0 auto; }
+
+        .container { padding: 20px 15px; max-width: 1000px; margin: 0 auto; }
+
+        /* الأقسام والبطاقات */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+            margin-top: 15px;
         }
 
         .card {
-            background: #fff;
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
         }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card h3 { padding: 15px 10px 10px; color: #2c3e50; font-size: 18px; }
+        .card:hover { transform: translateY(-50px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { color: #1e293b; font-size: 20px; margin-bottom: 12px; font-weight: 700; border-bottom: 2px solid #f59e0b; padding-bottom: 8px; display: inline-block; }
+        .card p { color: #475569; font-size: 15px; text-align: justify; margin-bottom: 20px; }
 
-        /* الأزرار العائمة */
+        /* أزرار الاتصال داخل الأقسام */
+        .card-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #1e293b;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background 0.3s ease;
+        }
+        .card-btn:hover { background: #d97706; }
+
+        /* الأزرار العائمة بالأسفل */
         .floating-buttons {
             position: fixed;
-            bottom: 15px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 12px;
+            gap: 15px;
             z-index: 1000;
-            width: 90%;
-            max-width: 400px;
+            width: 92%;
+            max-width: 420px;
         }
-        .btn {
+
+        .btn-float {
             flex: 1;
-            padding: 12px;
+            padding: 14px 18px;
             border-radius: 50px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
             font-size: 16px;
+            animation: pulseShake 3s infinite ease-in-out;
         }
-        .btn-call { background-color: #e67e22; }
-        .btn-whatsapp { background-color: #25d366; }
+
+        .btn-call { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); animation-delay: 0.3s; }
+
+        .btn-float i { font-size: 22px; }
+
+        /* انيميشن الاهتزاز الناعم والحركة */
+        @keyframes pulseShake {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            10% { transform: scale(1.03) rotate(-2deg); }
+            15% { transform: scale(1.03) rotate(2deg); }
+            20% { transform: scale(1.03) rotate(-2deg); }
+            25% { transform: scale(1.03) rotate(2deg); }
+            30% { transform: scale(1) rotate(0deg); }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>معلم سيراميك ورخام بالرياض</h1>
-        <p>تركيب سيراميك، بورسلان، ورخام بأعلى دقة وإتقان</p>
+        <h1>معلم تركيب سيراميك ورخام بالرياض</h1>
+        <p>متخصصون في تركيب أرضيات وجدران البورسلان، ألواح الرخام الكبيرة، والحمامات والمطابخ بأعلى درجات الجودة وبأحدث أجهزة الليزر.</p>
     </header>
 
     <div class="container">
         <div class="services-grid">
+
+            <!-- قسم 1 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="تركيب سيراميك أرضيات">
-                <h3>تركيب سيراميك أرضيات</h3>
+                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80" alt="تركيب ألواح البورسلان الكبيرة">
+                <div class="card-body">
+                    <div>
+                        <h3>تركيب ألواح البورسلan الكبيرة (Slab)</h3>
+                        <p>نوفر خدمة تركيب ألواح البورسلان ذات المقاسات الكبيرة جداً للجدران والأرضيات بالرياض، باستخدام أفضل أنواع الغراء المخصص والأدوات الحديثة لمنع التطبيل وضمان استواء السطح بنسبة 100% مع ضبط الفواصل بالليزر.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
+            <!-- قسم 2 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=500&q=80" alt="تركيب بورسلان">
-                <h3>تركيب بورسلان للصالات والمجالس</h3>
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="تركيب سيراميك وبورسلان الأرضيات">
+                <div class="card-body">
+                    <div>
+                        <h3>تركيب سيراميك وبورسلان الأرضيات</h3>
+                        <p>تركيب أرضيات الفلل، الصالات، والمجالس بجميع المقاسات (60×60، 80×80، 120×60). نضمن لك استقامة الميول، محاذاة الفواصل، واستخدام الخلطة الأسمنتية أو الغراء حسب طبيعة وتجهيز الأرضيات.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
+            <!-- قسم 3 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=500&q=80" alt="سيراميك حمامات ومطابخ">
-                <h3>تركيب سيراميك حمامات ومطابخ</h3>
+                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="تركيب جدران الحمامات والمطابخ">
+                <div class="card-body">
+                    <div>
+                        <h3>تركيب جدران الحمامات والمطابخ</h3>
+                        <p>تكسية جدران المطابخ والحمامات بأحدث ديكورات السيراميك والبورسلان، مع قص وتوزيع زوايا الديكور والمنافذ بدقة متناهية، والاهتمام بعزل الفواصل وتسكيرها ضد تسربات المياه.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
+            <!-- قسم 4 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="تركيب رخام درج">
-                <h3>تركيب رخام درج ومداخل</h3>
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="تركيب رخام الدرج والمداخل">
+                <div class="card-body">
+                    <div>
+                        <h3>تركيب رخام الدرج والمداخل</h3>
+                        <p>تركيب رخام الدرج والمداخل الرئيسية بأناقة وإتقان تام. تشمل الخدمة تشطيب الحواف، تركيب الشرفات، وتركيب نعلات الرخام المائية بالليزر ليعطي مظهرًا فخماً للمبنى.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
+            <!-- قسم 5 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500&q=80" alt="تركيب واجهات رخام">
-                <h3>تركيب واجهات رخام وبورسلان</h3>
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="تركيب واجهات رخام وبورسلان">
+                <div class="card-body">
+                    <div>
+                        <h3>تركيب واجهات رخام وبورسلان خارجية</h3>
+                        <p>تنفيذ واجهات العمائر والفلل بأسلوب التركيب الميكانيكي أو العادي المباشر، لضمان متانة وثبات ألواح الرخام والبورسلان ومقاومتها للعوامل الجوية والحرارة العالية بالرياض.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
+            <!-- قسم 6 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=500&q=80" alt="ترميم وتجديد السيراميك">
-                <h3>ترميم وتجديد أعمال السيراميك</h3>
+                <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80" alt="ترميم وتجديد السيراميك">
+                <div class="card-body">
+                    <div>
+                        <h3>ترميم وتجديد أعمال السيراميك والرخام</h3>
+                        <p>إصلاح السيراميك المطبل، معالجة التشققات، تركيب سيراميك فوق السيراميك القديم بدون تكسير باستخدام مادة الغراء الخاصة، وتجديد ترويبة الحمامات والمطابخ لتبدو كالجديدة.</p>
+                    </div>
+                    <a href="tel:0563293553" class="card-btn"><i class="fa-solid fa-phone"></i> اطلب الخدمة الآن</a>
+                </div>
             </div>
+
         </div>
     </div>
 
-    <!-- أزرار الاتصال العائمة -->
+    <!-- الأزرار العائمة الذكية بالأسفل -->
     <div class="floating-buttons">
-        <a href="tel:0563293553" class="btn btn-call">📞 اتصال مباشر</a>
-        <a href="https://wa.me/966563293553" class="btn btn-whatsapp">💬 واتساب</a>
+        <a href="tel:0563293553" class="btn-float btn-call">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>اتصال مباشر</span>
+        </a>
+        <a href="https://wa.me/966563293553" class="btn-float btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>مراسلة واتساب</span>
+        </a>
     </div>
 
 </body>
