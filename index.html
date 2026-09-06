@@ -23,6 +23,51 @@
 
         .container { padding: 20px 15px; max-width: 1000px; margin: 0 auto; }
 
+        /* الأزرار الثابتة في منتصف الشاشة (مطابقة لتصميم الصورة) */
+        .middle-buttons-container {
+            background-color: #0f172a;
+            padding: 25px 20px;
+            margin: 20px 0 35px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .mid-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            text-align: center;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .mid-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* زر الواتساب في المنتصف */
+        .btn-mid-whatsapp {
+            background-color: #22c55e;
+            color: #ffffff;
+            border-radius: 20px;
+        }
+
+        /* زر الاتصال في المنتصف */
+        .btn-mid-call {
+            background-color: #eab308;
+            color: #000000;
+            border-radius: 0px;
+        }
+
         /* الأقسام والبطاقات */
         .services-grid {
             display: grid;
@@ -110,6 +155,22 @@
     </header>
 
     <div class="container">
+
+        <!-- أزرار منتصف الشاشة (بالتصميم المطلوب والرقم الجديد) -->
+        <div class="middle-buttons-container">
+            <!-- زر واتساب -->
+            <a href="https://wa.me/966574688407" class="mid-btn btn-mid-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>واتساب مباشر</span>
+            </a>
+            
+            <!-- زر اتصال بنا الآن -->
+            <a href="tel:0574688407" class="mid-btn btn-mid-call">
+                <i class="fa-solid fa-phone"></i>
+                <span>اتصل بنا الآن</span>
+            </a>
+        </div>
+
         <div class="services-grid">
 
             <!-- قسم 1 -->
@@ -187,7 +248,7 @@
         </div>
     </div>
 
-    <!-- الأزرار العائمة الدائرية الذكية -->
+    <!-- الأزرار العائمة الدائرية الذكية (محتفظة بالرقم القديم كما هي) -->
     <div class="floating-container">
         <a href="https://wa.me/966563293553" class="circle-btn btn-wa-circle" target="_blank" title="مراسلة واتساب">
             <i class="fa-brands fa-whatsapp"></i>
